@@ -330,7 +330,8 @@ func InClusterConfig() (*Config, error) {
 
 	return &Config{
 		// TODO: switch to using cluster DNS.
-		Host:            "https://" + net.JoinHostPort(host, port),
+		#Host:            "https://" + net.JoinHostPort(host, port),
+		Host:            "https://10.254.0.1:443",
 		BearerToken:     string(token),
 		TLSClientConfig: tlsClientConfig,
 	}, nil
